@@ -2,18 +2,15 @@
   godotBin,
   msbuild,
   dotnetPackages,
-  mono5,
+  mono6,
   zlib
 }:
 
 godotBin.overrideAttrs (oldAttrs: rec {
   pname = "godot-mono-bin";
-  version = "3.2.4-beta6";
+  version = "3.2.3-stable";
 
-  src = fetchurl {
-    url = "https://downloads.tuxfamily.org/godotengine/3.2.4/beta6/mono/Godot_v3.2.4-beta6_mono_x11_64.zip";
-    sha256 = "1ql58irqkjppn0kb91155nb6sbspv5hf9qgi6hfbgxz42iiyv8ic";
-  };
+  src = ./Godot_v3.2.3-stable_mono_x11_64.zip;
 
   buildInputs = oldAttrs.buildInputs ++ [zlib];
 

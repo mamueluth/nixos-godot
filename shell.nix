@@ -11,7 +11,8 @@ in
   mkShell {
     buildInputs = with pkgs; [
       godot
-      godotHeadless
       godotMono
+      msBuild
+      mono6
     ];
   }
