@@ -12,7 +12,7 @@ in
     buildInputs = with pkgs; [
       godot
       godotMono
-      msBuild
+      msbuild
       mono6
     ];
   }
